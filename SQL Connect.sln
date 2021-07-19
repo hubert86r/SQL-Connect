@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31424.327
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SQL Connect", "SQL Connect.csproj", "{1E9438EF-5821-4064-9E97-137F9439CD21}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1E9438EF-5821-4064-9E97-137F9439CD21}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1E9438EF-5821-4064-9E97-137F9439CD21}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1E9438EF-5821-4064-9E97-137F9439CD21}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1E9438EF-5821-4064-9E97-137F9439CD21}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {476EC458-B53F-4BF7-818D-8B5E6CEE5F9A}
+	EndGlobalSection
+EndGlobal
