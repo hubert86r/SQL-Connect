@@ -50,10 +50,40 @@ namespace SQL_Connect
                 sqlCon.Close();
             }
         }
-
-        private void Name_Click(object sender, EventArgs e)
+        private void FillDataGridView()
         {
+            try
+            {
+                if (sqlCon.State == ConnectionState.Closed)
+                    sqlCon.Open();
+                SqlDataAdapter sqlDa = new SqlDataAdapter("View_Search_Product", sqlCon);
+                sqlDa.SelectCommand.CommandType = CommandType.StoredProcedure;
+                sqlDa.SelectCommand.Parameters.AddWithValue("@productName", txtSearch.Text.Trim());
+                DataTable dtbl = new DataTable();
+                sqlDa.Fill(dtbl);
+                dgvProducts.DataSource = dtbl;
+            }
+            catch (Exception ex)
+            {
 
+                MessageBox.Show(ex.Message, "Error message");
+            }
+            finally
+            {
+                sqlCon.Close();
+            }
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                FillDataGridView();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error message");
+            }
         }
     }
 }
