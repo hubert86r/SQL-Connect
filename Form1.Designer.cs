@@ -76,12 +76,12 @@ namespace SQL_Connect
             // dgvProducts
             // 
             this.dgvProducts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvProducts.Location = new System.Drawing.Point(446, 80);
+            this.dgvProducts.Location = new System.Drawing.Point(446, 95);
             this.dgvProducts.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dgvProducts.Name = "dgvProducts";
             this.dgvProducts.RowHeadersWidth = 51;
             this.dgvProducts.RowTemplate.Height = 25;
-            this.dgvProducts.Size = new System.Drawing.Size(740, 200);
+            this.dgvProducts.Size = new System.Drawing.Size(613, 200);
             this.dgvProducts.TabIndex = 3;
             // 
             // lblName
@@ -162,7 +162,7 @@ namespace SQL_Connect
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1198, 915);
+            this.ClientSize = new System.Drawing.Size(1084, 379);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.txtSearch);
             this.Controls.Add(this.txtDescription);
