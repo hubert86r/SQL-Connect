@@ -30,18 +30,24 @@ namespace SQL_Connect
             {
                 if (sqlCon.State == ConnectionState.Closed)
                     sqlCon.Open();
-                SqlCommand sqlCmd = new SqlCommand("ConnectAddOrEdit", sqlCon);
+                SqlCommand sqlCmd = new SqlCommand("Add_Edit_Product", sqlCon);
                 sqlCmd.CommandType = CommandType.StoredProcedure;
                 sqlCmd.Parameters.AddWithValue("@mode", "Add");
-                sqlCmd.Parameters.AddWithValue("@code", lbl);
-                sqlCmd.Parameters.AddWithValue("@name", "Add");
-                sqlCmd.Parameters.AddWithValue("@description", "Add");
+                sqlCmd.Parameters.AddWithValue("@code", txtCode.Text.Trim());
+                sqlCmd.Parameters.AddWithValue("@name", txtName.Text.Trim());
+                sqlCmd.Parameters.AddWithValue("@description", txtDescription.Text.Trim());
+                sqlCmd.ExecuteNonQuery();
+                MessageBox.Show("Saved successfully");
                 
             }
             catch (Exception ex)
             {
 
                 MessageBox.Show(ex.Message,"Error message");
+            }
+            finally
+            {
+                sqlCon.Close();
             }
         }
 
