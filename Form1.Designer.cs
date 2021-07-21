@@ -58,7 +58,7 @@ namespace SQL_Connect
             // lblCode
             // 
             this.lblCode.AutoSize = true;
-            this.lblCode.Location = new System.Drawing.Point(23, 49);
+            this.lblCode.Location = new System.Drawing.Point(15, 49);
             this.lblCode.Name = "lblCode";
             this.lblCode.Size = new System.Drawing.Size(44, 20);
             this.lblCode.TabIndex = 1;
@@ -81,13 +81,13 @@ namespace SQL_Connect
             this.dgvProducts.Name = "dgvProducts";
             this.dgvProducts.RowHeadersWidth = 51;
             this.dgvProducts.RowTemplate.Height = 25;
-            this.dgvProducts.Size = new System.Drawing.Size(613, 200);
+            this.dgvProducts.Size = new System.Drawing.Size(613, 295);
             this.dgvProducts.TabIndex = 3;
             // 
             // lblName
             // 
             this.lblName.AutoSize = true;
-            this.lblName.Location = new System.Drawing.Point(23, 104);
+            this.lblName.Location = new System.Drawing.Point(15, 102);
             this.lblName.Name = "lblName";
             this.lblName.Size = new System.Drawing.Size(49, 20);
             this.lblName.TabIndex = 5;
@@ -106,7 +106,7 @@ namespace SQL_Connect
             // lblDescription
             // 
             this.lblDescription.AutoSize = true;
-            this.lblDescription.Location = new System.Drawing.Point(23, 167);
+            this.lblDescription.Location = new System.Drawing.Point(15, 167);
             this.lblDescription.Name = "lblDescription";
             this.lblDescription.Size = new System.Drawing.Size(85, 20);
             this.lblDescription.TabIndex = 7;
@@ -149,10 +149,10 @@ namespace SQL_Connect
             // 
             // btnSearch
             // 
-            this.btnSearch.Location = new System.Drawing.Point(879, 38);
+            this.btnSearch.Location = new System.Drawing.Point(880, 42);
             this.btnSearch.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(86, 31);
+            this.btnSearch.Size = new System.Drawing.Size(86, 27);
             this.btnSearch.TabIndex = 11;
             this.btnSearch.Text = "Search";
             this.btnSearch.UseVisualStyleBackColor = true;
@@ -162,7 +162,7 @@ namespace SQL_Connect
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1084, 379);
+            this.ClientSize = new System.Drawing.Size(1084, 403);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.txtSearch);
             this.Controls.Add(this.txtDescription);
