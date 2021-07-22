@@ -79,10 +79,12 @@ namespace SQL_Connect
             this.dgvProducts.Location = new System.Drawing.Point(446, 95);
             this.dgvProducts.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dgvProducts.Name = "dgvProducts";
+            this.dgvProducts.ReadOnly = true;
             this.dgvProducts.RowHeadersWidth = 51;
             this.dgvProducts.RowTemplate.Height = 25;
             this.dgvProducts.Size = new System.Drawing.Size(613, 295);
             this.dgvProducts.TabIndex = 3;
+            this.dgvProducts.DoubleClick += new System.EventHandler(this.dgvProducts_DoubleClick);
             // 
             // lblName
             // 

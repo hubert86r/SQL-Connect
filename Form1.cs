@@ -14,6 +14,7 @@ namespace SQL_Connect
     public partial class Form1 : System.Windows.Forms.Form
     {
         SqlConnection sqlCon = new SqlConnection(@"SERVER=(local)\bazaradwag2017;User ID=sa;Password=Radwag99;Initial Catalog=SQL_Connect;Connect Timeout = 30000;");
+        int productId = 0;
         public Form1()
         {
             InitializeComponent();
@@ -30,14 +31,30 @@ namespace SQL_Connect
             {
                 if (sqlCon.State == ConnectionState.Closed)
                     sqlCon.Open();
-                SqlCommand sqlCmd = new SqlCommand("Add_Edit_Product", sqlCon);
-                sqlCmd.CommandType = CommandType.StoredProcedure;
-                sqlCmd.Parameters.AddWithValue("@mode", "Add");
-                sqlCmd.Parameters.AddWithValue("@code", txtCode.Text.Trim());
-                sqlCmd.Parameters.AddWithValue("@name", txtName.Text.Trim());
-                sqlCmd.Parameters.AddWithValue("@description", txtDescription.Text.Trim());
-                sqlCmd.ExecuteNonQuery();
-                MessageBox.Show("Saved successfully");
+                if (btnSave.Text == "Save")
+                {
+                    SqlCommand sqlCmd = new SqlCommand("Add_Edit_Product", sqlCon);
+                    sqlCmd.CommandType = CommandType.StoredProcedure;
+                    sqlCmd.Parameters.AddWithValue("@id", 0);
+                    sqlCmd.Parameters.AddWithValue("@mode", "Add");
+                    sqlCmd.Parameters.AddWithValue("@code", txtCode.Text.Trim());
+                    sqlCmd.Parameters.AddWithValue("@name", txtName.Text.Trim());
+                    sqlCmd.Parameters.AddWithValue("@description", txtDescription.Text.Trim());
+                    sqlCmd.ExecuteNonQuery();
+                    MessageBox.Show("Saved successfully");
+                }
+                else
+                {
+                    SqlCommand sqlCmd = new SqlCommand("Add_Edit_Product", sqlCon);
+                    sqlCmd.CommandType = CommandType.StoredProcedure;
+                    sqlCmd.Parameters.AddWithValue("@id", productId);
+                    sqlCmd.Parameters.AddWithValue("@mode", "Edit");
+                    sqlCmd.Parameters.AddWithValue("@code", txtCode.Text.Trim());
+                    sqlCmd.Parameters.AddWithValue("@name", txtName.Text.Trim());
+                    sqlCmd.Parameters.AddWithValue("@description", txtDescription.Text.Trim());
+                    sqlCmd.ExecuteNonQuery();
+                    MessageBox.Show("Update successfully");
+                }
                 
             }
             catch (Exception ex)
@@ -83,6 +100,18 @@ namespace SQL_Connect
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Error message");
+            }
+        }
+
+        private void dgvProducts_DoubleClick(object sender, EventArgs e)
+        {
+            if (dgvProducts.CurrentRow.Index != -1)
+            {
+                productId = Convert.ToInt32(dgvProducts.CurrentRow.Cells[0].Value.ToString());
+                txtName.Text = dgvProducts.CurrentRow.Cells[1].Value.ToString();
+                txtCode.Text = dgvProducts.CurrentRow.Cells[2].Value.ToString();
+                txtDescription.Text = dgvProducts.CurrentRow.Cells[3].Value.ToString();
+                btnSave.Text = "Update";
             }
         }
     }
