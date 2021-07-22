@@ -55,7 +55,8 @@ namespace SQL_Connect
                     sqlCmd.ExecuteNonQuery();
                     MessageBox.Show("Update successfully");
                 }
-                
+                Reset();
+                FillDataGridView();
             }
             catch (Exception ex)
             {
@@ -108,10 +109,56 @@ namespace SQL_Connect
             if (dgvProducts.CurrentRow.Index != -1)
             {
                 productId = Convert.ToInt32(dgvProducts.CurrentRow.Cells[0].Value.ToString());
-                txtName.Text = dgvProducts.CurrentRow.Cells[1].Value.ToString();
-                txtCode.Text = dgvProducts.CurrentRow.Cells[2].Value.ToString();
+                txtName.Text = dgvProducts.CurrentRow.Cells[2].Value.ToString();
+                txtCode.Text = dgvProducts.CurrentRow.Cells[1].Value.ToString();
                 txtDescription.Text = dgvProducts.CurrentRow.Cells[3].Value.ToString();
                 btnSave.Text = "Update";
+                btnDelete.Enabled = true;
+            }
+        }
+        void Reset()
+        {
+            txtCode.Text = txtName.Text = txtDescription.Text = txtSearch.Text = "";
+            btnSave.Text = "Save";
+            productId = 0;
+            btnDelete.Enabled = false;
+        }
+
+        private void btnReset_Click(object sender, EventArgs e)
+        {
+            Reset();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            Reset();
+            FillDataGridView();
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (sqlCon.State == ConnectionState.Closed)
+                    sqlCon.Open();
+                
+                    SqlCommand sqlCmd = new SqlCommand("Delete_Product", sqlCon);
+                    sqlCmd.CommandType = CommandType.StoredProcedure;
+                    sqlCmd.Parameters.AddWithValue("@id", productId);
+                    sqlCmd.ExecuteNonQuery();
+                    MessageBox.Show("Delete successfully");
+                
+                Reset();
+                FillDataGridView();
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message, "Error message");
+            }
+            finally
+            {
+                sqlCon.Close();
             }
         }
     }
