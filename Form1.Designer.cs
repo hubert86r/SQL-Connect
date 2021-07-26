@@ -46,7 +46,7 @@ namespace SQL_Connect
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(22, 282);
+            this.btnSave.Location = new System.Drawing.Point(23, 42);
             this.btnSave.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(86, 31);
@@ -58,7 +58,7 @@ namespace SQL_Connect
             // lblCode
             // 
             this.lblCode.AutoSize = true;
-            this.lblCode.Location = new System.Drawing.Point(15, 49);
+            this.lblCode.Location = new System.Drawing.Point(21, 99);
             this.lblCode.Name = "lblCode";
             this.lblCode.Size = new System.Drawing.Size(44, 20);
             this.lblCode.TabIndex = 1;
@@ -67,10 +67,10 @@ namespace SQL_Connect
             // 
             // txtCode
             // 
-            this.txtCode.Location = new System.Drawing.Point(106, 45);
+            this.txtCode.Location = new System.Drawing.Point(112, 95);
             this.txtCode.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtCode.Name = "txtCode";
-            this.txtCode.Size = new System.Drawing.Size(190, 27);
+            this.txtCode.Size = new System.Drawing.Size(213, 27);
             this.txtCode.TabIndex = 2;
             // 
             // dgvProducts
@@ -89,7 +89,7 @@ namespace SQL_Connect
             // lblName
             // 
             this.lblName.AutoSize = true;
-            this.lblName.Location = new System.Drawing.Point(15, 102);
+            this.lblName.Location = new System.Drawing.Point(21, 152);
             this.lblName.Name = "lblName";
             this.lblName.Size = new System.Drawing.Size(49, 20);
             this.lblName.TabIndex = 5;
@@ -97,7 +97,7 @@ namespace SQL_Connect
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(136, 282);
+            this.btnDelete.Location = new System.Drawing.Point(152, 42);
             this.btnDelete.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(86, 31);
@@ -109,7 +109,7 @@ namespace SQL_Connect
             // lblDescription
             // 
             this.lblDescription.AutoSize = true;
-            this.lblDescription.Location = new System.Drawing.Point(15, 167);
+            this.lblDescription.Location = new System.Drawing.Point(21, 217);
             this.lblDescription.Name = "lblDescription";
             this.lblDescription.Size = new System.Drawing.Size(85, 20);
             this.lblDescription.TabIndex = 7;
@@ -117,7 +117,7 @@ namespace SQL_Connect
             // 
             // btnReset
             // 
-            this.btnReset.Location = new System.Drawing.Point(273, 282);
+            this.btnReset.Location = new System.Drawing.Point(274, 42);
             this.btnReset.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnReset.Name = "btnReset";
             this.btnReset.Size = new System.Drawing.Size(86, 31);
@@ -128,19 +128,19 @@ namespace SQL_Connect
             // 
             // txtName
             // 
-            this.txtName.Location = new System.Drawing.Point(106, 95);
+            this.txtName.Location = new System.Drawing.Point(112, 145);
             this.txtName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(190, 27);
+            this.txtName.Size = new System.Drawing.Size(213, 27);
             this.txtName.TabIndex = 8;
             // 
             // txtDescription
             // 
-            this.txtDescription.Location = new System.Drawing.Point(106, 164);
+            this.txtDescription.Location = new System.Drawing.Point(112, 214);
             this.txtDescription.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtDescription.Multiline = true;
             this.txtDescription.Name = "txtDescription";
-            this.txtDescription.Size = new System.Drawing.Size(190, 68);
+            this.txtDescription.Size = new System.Drawing.Size(213, 68);
             this.txtDescription.TabIndex = 9;
             // 
             // txtSearch
@@ -153,10 +153,10 @@ namespace SQL_Connect
             // 
             // btnSearch
             // 
-            this.btnSearch.Location = new System.Drawing.Point(880, 42);
+            this.btnSearch.Location = new System.Drawing.Point(932, 42);
             this.btnSearch.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(86, 27);
+            this.btnSearch.Size = new System.Drawing.Size(127, 27);
             this.btnSearch.TabIndex = 11;
             this.btnSearch.Text = "Search";
             this.btnSearch.UseVisualStyleBackColor = true;
